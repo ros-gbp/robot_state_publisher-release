@@ -1,3 +1,24 @@
+## robot_state_publisher (jade) - 1.10.4-0
+
+The packages in the `robot_state_publisher` repository were released into the `jade` distro by running `/usr/bin/bloom-release robot_state_publisher --track jade --rosdistro jade --new-track` on `Thu, 23 Apr 2015 20:35:23 -0000`
+
+The `robot_state_publisher` package was released.
+
+Version of package(s) in repository `robot_state_publisher`:
+- upstream repository: https://github.com/ros/robot_state_publisher.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `1.10.4-0`
+
+Versions of tools used:
+- bloom version: `0.5.19`
+- catkin_pkg version: `0.2.4`
+- rosdep version: `0.10.28`
+- rosdistro version: `0.4.0`
+- vcstools version: `0.1.35`
+
+
 ## robot_state_publisher (hydro) - 1.9.12-0
 
 The packages in the `robot_state_publisher` repository were released into the `hydro` distro by running `/usr/bin/bloom-release -t hydro -r hydro robot_state_publisher` on `Sun, 30 Nov 2014 19:14:10 -0000`
