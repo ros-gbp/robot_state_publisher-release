@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 2.8)
 project(robot_state_publisher)
 
-find_package(Eigen REQUIRED)
 find_package(orocos_kdl REQUIRED) 
 find_package(catkin REQUIRED
-  COMPONENTS roscpp rosconsole rostime tf tf_conversions kdl_parser
+  COMPONENTS roscpp rosconsole rostime tf tf_conversions kdl_parser cmake_modules
 )
+find_package(Eigen REQUIRED)
 
 catkin_package(
   LIBRARIES ${PROJECT_NAME}_solver
@@ -23,11 +23,11 @@ add_library(${PROJECT_NAME}_solver
 target_link_libraries(${PROJECT_NAME}_solver ${catkin_LIBRARIES} ${orocos_kdl_LIBRARIES})
 
 add_executable(${PROJECT_NAME} src/joint_state_listener.cpp)
-target_link_libraries(${PROJECT_NAME} ${PROJECT_NAME}_solver log4cxx ${orocos_kdl_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} ${PROJECT_NAME}_solver ${orocos_kdl_LIBRARIES})
 
 # compile the same executable using the old name as well
 add_executable(state_publisher src/joint_state_listener.cpp)
-target_link_libraries(state_publisher ${PROJECT_NAME}_solver log4cxx ${orocos_kdl_LIBRARIES})
+target_link_libraries(state_publisher ${PROJECT_NAME}_solver ${orocos_kdl_LIBRARIES})
 
 # CATKIN has no ROS test for now. Disabling
 
