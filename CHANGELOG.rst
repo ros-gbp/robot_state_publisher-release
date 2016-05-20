@@ -2,11 +2,18 @@
 Changelog for package robot_state_publisher
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.12.2 (2016-05-20)
+1.13.1 (2016-05-20)
 -------------------
-* Add back future dating for robot_state_publisher (`#49 <https://github.com/ros/robot_state_publisher/issues/49>`_)
-* Restore default argument of tf_static
+* Add back future dating for robot_state_publisher (`#49 <https://github.com/ros/robot_state_publisher/issues/49>`_) (`#51 <https://github.com/ros/robot_state_publisher/issues/51>`_)
+* Fix subclassing test (`#48 <https://github.com/ros/robot_state_publisher/issues/48>`_)
+* Support for subclassing (`#45 <https://github.com/ros/robot_state_publisher/issues/45>`_)
+  * Add joint_state_listener as a library
 * Contributors: Jackie Kay
+
+1.13.0 (2016-04-12)
+-------------------
+* fix bad rebase
+* Contributors: Jackie Kay, Paul Bovbel
 
 1.12.1 (2016-02-22)
 -------------------
@@ -54,7 +61,6 @@ Changelog for package robot_state_publisher
 1.11.0 (2015-10-21)
 -------------------
 * Merge pull request `#28 <https://github.com/ros/robot_state_publisher/issues/28>`_ from clearpathrobotics/tf2-static
-
 
 1.10.4 (2014-11-30)
 -------------------
