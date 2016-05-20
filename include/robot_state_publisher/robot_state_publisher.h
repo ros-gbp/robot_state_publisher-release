@@ -81,6 +81,7 @@ public:
 private:
   void addChildren(const KDL::SegmentMap::const_iterator segment);
 
+
   std::map<std::string, SegmentPair> segments_, segments_fixed_;
   const urdf::Model& model_;
   tf2_ros::TransformBroadcaster tf_broadcaster_;
