@@ -88,7 +88,16 @@ void JointStateListener::callbackFixedJoint(const ros::TimerEvent& e)
 void JointStateListener::callbackJointState(const JointStateConstPtr& state)
 {
   if (state->name.size() != state->position.size()){
-    ROS_ERROR("Robot state publisher received an invalid joint state vector");
+    if (state->position.empty()){
+      const int throttleSeconds = 300;
+      ROS_WARN_THROTTLE(throttleSeconds,
+          "Robot state publisher ignored a JointState message about joint(s) "
+          "\"%s\"(,...) whose position member was empty. This message will "
+          "not reappear for %d seconds.", state->name[0].c_str(),
+          throttleSeconds);
+    } else {
+      ROS_ERROR("Robot state publisher ignored an invalid JointState message");
+    }
     return;
   }
 
@@ -165,7 +174,7 @@ int main(int argc, char** argv)
 
   MimicMap mimic;
 
-  for(std::map< std::string, boost::shared_ptr< urdf::Joint > >::iterator i = model.joints_.begin(); i != model.joints_.end(); i++){
+  for(std::map< std::string, urdf::JointSharedPtr >::iterator i = model.joints_.begin(); i != model.joints_.end(); i++){
     if(i->second->mimic){
       mimic.insert(make_pair(i->first, i->second->mimic));
     }
