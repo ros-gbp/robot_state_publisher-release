@@ -1,3 +1,26 @@
+## robot_state_publisher (kinetic) - 1.13.4-0
+
+The packages in the `robot_state_publisher` repository were released into the `kinetic` distro by running `/usr/local/bin/bloom-release -r kinetic -t kinetic robot_state_publisher` on `Thu, 05 Jan 2017 18:46:49 -0000`
+
+The `robot_state_publisher` package was released.
+
+Version of package(s) in repository `robot_state_publisher`:
+
+- upstream repository: https://github.com/ros/robot_state_publisher.git
+- release repository: https://github.com/ros-gbp/robot_state_publisher-release.git
+- rosdistro version: `1.13.3-0`
+- old version: `1.13.3-0`
+- new version: `1.13.4-0`
+
+Versions of tools used:
+
+- bloom version: `0.5.22`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.5`
+- rosdistro version: `0.5.0`
+- vcstools version: `0.1.39`
+
+
 ## robot_state_publisher (kinetic) - 1.13.3-0
 
 The packages in the `robot_state_publisher` repository were released into the `kinetic` distro by running `/usr/local/bin/bloom-release -r kinetic -t kinetic robot_state_publisher` on `Thu, 20 Oct 2016 18:48:38 -0000`
