@@ -1,0 +1,145 @@
+ros-melodic-robot-state-publisher (1.13.6-0bionic) bionic; urgency=high
+
+  * added warning when joint is found in joint message but not in the urdf (#83 <https://github.com/ros/robot_state_publisher/issues/83>)
+  * added ros_warn if JointStateMessage is older than 30 seconds (#84 <https://github.com/ros/robot_state_publisher/issues/84>)
+  * Add tcp_no_delay to joint_states subscriber (#80 <https://github.com/ros/robot_state_publisher/issues/80>)
+  * make rostest in CMakeLists optional (ros/rosdistro#3010 <https://github.com/ros/rosdistro/issues/3010>) (#75 <https://github.com/ros/robot_state_publisher/issues/75>)
+  * Added c++11 target_compile_options (#78 <https://github.com/ros/robot_state_publisher/issues/78>)
+  * Contributors: Lukas Bulwahn, Shane Loretz, Victor Lopez, jgueldenstein
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 05 Apr 2018 00:00:00 -0000
+
+ros-melodic-robot-state-publisher (1.13.5-0bionic) bionic; urgency=high
+
+  * Style cleanup throughout the tree.
+  * add Chris and Shane as maintainers (#70 <https://github.com/ros/robot_state_publisher/issues/70>)
+  * Contributors: Chris Lalancette, William Woodall
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 11 Apr 2017 00:00:00 -0000
+
+ros-melodic-robot-state-publisher (1.13.4-0bionic) bionic; urgency=high
+
+  * Use ``urdf::*ShredPtr`` instead of ``boost::shared_ptr`` (#60 <https://github.com/ros/robot_state_publisher/issues/60>)
+  * Error log for empty JointState.position was downgraded to a throttled warning (#64 <https://github.com/ros/robot_state_publisher/issues/64>)
+  * Contributors: Jochen Sprickerhof, Sébastien BARTHÉLÉMY
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 05 Jan 2017 00:00:00 -0000
+
+ros-melodic-robot-state-publisher (1.13.3-0bionic) bionic; urgency=high
+
+  * Added a new parameter "ignore_timestamp" (#65 <https://github.com/ros/robot_state_publisher/issues/65>)
+  * Fixed joints are not published over tf_static by default (#56 <https://github.com/ros/robot_state_publisher/issues/56>)
+  * Fixed segfault on undefined robot_description (#61 <https://github.com/ros/robot_state_publisher/issues/61>)
+  * Fixed cmake eigen3 warning (#62 <https://github.com/ros/robot_state_publisher/issues/62>)
+  * Contributors: Davide Faconti, Ioan A Sucan, Johannes Meyer, Robert Haschke
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 20 Oct 2016 00:00:00 -0000
+
+ros-melodic-robot-state-publisher (1.13.2-0bionic) bionic; urgency=high
+
+  * Add target_link_libraries for joint_state_listener library + install it (#54 <https://github.com/ros/robot_state_publisher//issues/54>)
+  * Contributors: Kartik Mohta
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Fri, 10 Jun 2016 00:00:00 -0000
+
+ros-melodic-robot-state-publisher (1.13.1-0bionic) bionic; urgency=high
+
+  * Add back future dating for robot_state_publisher (#49 <https://github.com/ros/robot_state_publisher/issues/49>) (#51 <https://github.com/ros/robot_state_publisher/issues/51>)
+  * Fix subclassing test (#48 <https://github.com/ros/robot_state_publisher/issues/48>)
+  * Support for subclassing (#45 <https://github.com/ros/robot_state_publisher/issues/45>)
+    * Add joint_state_listener as a library
+  * Contributors: Jackie Kay
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Fri, 20 May 2016 00:00:00 -0000
+
+ros-melodic-robot-state-publisher (1.13.0-0bionic) bionic; urgency=high
+
+  * fix bad rebase
+  * Contributors: Jackie Kay, Paul Bovbel
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 12 Apr 2016 00:00:00 -0000
+
+ros-melodic-robot-state-publisher (1.12.1-0bionic) bionic; urgency=high
+
+  * Merge pull request #42 <https://github.com/ros/robot_state_publisher/issues/42> from ros/fix_tests_jade
+    Fix tests for Jade
+  * Correct failing tests
+  * Re-enabling rostests
+  * Merge pull request #39 <https://github.com/ros/robot_state_publisher/issues/39> from scpeters/issue_38
+  * Fix API break in publishFixedTransforms
+    A bool argument was added to
+    RobotStatePublisher::publishFixedTransforms
+    which broke API.
+    I've added a default value of false, to match
+    the default specified in the JointStateListener
+    constructor.
+  * Contributors: Jackie Kay, Jonathan Bohren, Steven Peters
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 22 Feb 2016 00:00:00 -0000
+
+ros-melodic-robot-state-publisher (1.12.0-0bionic) bionic; urgency=high
+
+  * Merge pull request #37 <https://github.com/ros/robot_state_publisher/issues/37> from clearpathrobotics/static-default
+    Publish fixed joints over tf_static by default
+  * Merge pull request #34 <https://github.com/ros/robot_state_publisher/issues/34> from ros/tf2-static-jade
+    Port to tf2 and enable using static broadcaster
+  * Merge pull request #32 <https://github.com/ros/robot_state_publisher/issues/32> from shadow-robot/fix_issue#19 <https://github.com/shadow-robot/fix_issue/issues/19>
+    Check URDF to distinguish fixed joints from floating joints. Floating joint are ignored by the publisher.
+  * Merge pull request #26 <https://github.com/ros/robot_state_publisher/issues/26> from xqms/remove-debug
+    get rid of argv[0] debug output on startup
+  * Contributors: David Lu!!, Ioan A Sucan, Jackie Kay, Max Schwarz, Paul Bovbel, Toni Oliver
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Wed, 21 Oct 2015 00:00:00 -0000
+
+ros-melodic-robot-state-publisher (1.11.1-0bionic) bionic; urgency=high
+
+  * Merge pull request #41 <https://github.com/ros/robot_state_publisher/issues/41> from ros/fix_tests_indigo
+    Re-enable and clean up rostests
+  * Correct failing tests
+  * Re-enabling rostests
+  * Fix API break in publishFixedTransforms
+    A bool argument was added to
+    RobotStatePublisher::publishFixedTransforms
+    which broke API.
+    I've added a default value of false, to match
+    the default specified in the JointStateListener
+    constructor.
+  * Contributors: Jackie Kay, Jonathan Bohren, Steven Peters
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 22 Feb 2016 00:00:00 -0000
+
+ros-melodic-robot-state-publisher (1.11.0-0bionic) bionic; urgency=high
+
+  * Merge pull request #28 <https://github.com/ros/robot_state_publisher/issues/28> from clearpathrobotics/tf2-static
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Wed, 21 Oct 2015 00:00:00 -0000
+
+ros-melodic-robot-state-publisher (1.10.4-0bionic) bionic; urgency=high
+
+  * Merge pull request #21 <https://github.com/ros/robot_state_publisher/issues/21> from rcodddow/patch-1
+  * Fix for joint transforms not being published anymore after a clock reset (e.g. when playing a bagfile and looping)
+  * Contributors: Ioan A Sucan, Robert Codd-Downey, Timm Linder
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sun, 30 Nov 2014 00:00:00 -0000
+
+ros-melodic-robot-state-publisher (1.10.3-0bionic) bionic; urgency=high
+
+  * add version depend on orocos_kdl >= 1.3.0
+    Conflicts:
+    package.xml
+  * Update KDL SegmentMap interface to optionally use shared pointers
+    The KDL Tree API optionally uses shared pointers on platforms where
+    the STL containers don't support incomplete types.
+  * Contributors: Brian Jensen, William Woodall
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 24 Jul 2014 00:00:00 -0000
+
+ros-melodic-robot-state-publisher (1.10.0-0bionic) bionic; urgency=high
+
+  * minor style fixes
+  * Add support for mimic tag.
+  * Contributors: Ioan Sucan, Konrad Banachowicz
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 03 Mar 2014 00:00:00 -0000
+
+
