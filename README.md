@@ -1,3 +1,26 @@
+## robot_state_publisher (melodic) - 1.14.1-1
+
+The packages in the `robot_state_publisher` repository were released into the `melodic` distro by running `/usr/bin/bloom-release --track melodic --rosdistro melodic robot_state_publisher` on `Thu, 02 Apr 2020 19:51:01 -0000`
+
+The `robot_state_publisher` package was released.
+
+Version of package(s) in repository `robot_state_publisher`:
+
+- upstream repository: https://github.com/ros/robot_state_publisher.git
+- release repository: https://github.com/ros-gbp/robot_state_publisher-release.git
+- rosdistro version: `1.14.0-1`
+- old version: `1.14.0-1`
+- new version: `1.14.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.3`
+- catkin_pkg version: `0.4.16`
+- rosdep version: `0.18.0`
+- rosdistro version: `0.8.0`
+- vcstools version: `0.1.42`
+
+
 ## robot_state_publisher (melodic) - 1.14.0-1
 
 The packages in the `robot_state_publisher` repository were released into the `melodic` distro by running `/usr/bin/bloom-release -e --track melodic --rosdistro melodic robot_state_publisher` on `Tue, 27 Aug 2019 19:52:24 -0000`
