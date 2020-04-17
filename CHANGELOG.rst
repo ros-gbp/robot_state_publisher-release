@@ -2,16 +2,15 @@
 Changelog for package robot_state_publisher
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.14.1 (2020-04-02)
+1.15.0 (2020-04-17)
 -------------------
-* Bump CMake version to avoid CMP0048 warning (`#132 <https://github.com/ros/robot_state_publisher/issues/132>`_)
-* Make sure to make sensor_msgs a catkin dependency. (`#123 <https://github.com/ros/robot_state_publisher/issues/123>`_)
-* Add joint_state_listener to the catkin package LIBRARIES (`#112 <https://github.com/ros/robot_state_publisher/issues/112>`_)
-* Contributors: Alejandro Hernández Cordero, Chris Lalancette, sevangelatos
-
-1.14.0 (2019-08-27)
--------------------
-* Revert "Remove dependency on tf and tf_prefix support (`#82 <https://github.com/ros/robot_state_publisher/issues/82>`_)" (`#113 <https://github.com/ros/robot_state_publisher/issues/113>`_)
+* Remove state_publisher and add in a public default constructor (`#87 <https://github.com/ros/robot_state_publisher/issues/87>`_)
+* Added support for custom RobotStatePublisher implementations (API/ABI break) (`#115 <https://github.com/ros/robot_state_publisher/issues/115>`_)
+* Bump CMake version to avoid CMP0048 (`#136 <https://github.com/ros/robot_state_publisher/issues/136>`_)
+* Add missing test depend rosbag (`#135 <https://github.com/ros/robot_state_publisher/issues/135>`_)
+* Used orocos keys (`#134 <https://github.com/ros/robot_state_publisher/issues/134>`_)
+* Add joint_state_listener to the catkin package LIBRARIES (`#112 <https://github.com/ros/robot_state_publisher/issues/112>`_) (`#114 <https://github.com/ros/robot_state_publisher/issues/114>`_)
+* Make sure to make sensor_msgs a catkin dependency. (`#122 <https://github.com/ros/robot_state_publisher/issues/122>`_)
 * update how compiler flags are added (`#104 <https://github.com/ros/robot_state_publisher/issues/104>`_)
 * update install destination in CMakeLists.txt (`#103 <https://github.com/ros/robot_state_publisher/issues/103>`_)
 * Remove treefksolver completely from the repository. (`#100 <https://github.com/ros/robot_state_publisher/issues/100>`_)
@@ -24,7 +23,7 @@ Changelog for package robot_state_publisher
 * Remove dependency on tf and tf_prefix support (`#82 <https://github.com/ros/robot_state_publisher/issues/82>`_)
 * make rostest in CMakeLists optional (`ros/rosdistro#3010 <https://github.com/ros/rosdistro/issues/3010>`_) (`#75 <https://github.com/ros/robot_state_publisher/issues/75>`_)
 * Added c++11 target_compile_options (`#78 <https://github.com/ros/robot_state_publisher/issues/78>`_)
-* Contributors: Chris Lalancette, James Xu, Lukas Bulwahn, Shane Loretz, betab0t, jgueldenstein
+* Contributors: Alejandro Hernández Cordero, Chris Lalancette, James Xu, Lukas Bulwahn, Martin Pecka, Shane Loretz, betab0t, jgueldenstein
 
 1.13.5 (2017-04-11)
 -------------------
