@@ -66,6 +66,9 @@ JointStateListener::JointStateListener(const std::shared_ptr<RobotStatePublisher
   // set publish frequency
   double publish_freq;
   n_tilde.param("publish_frequency", publish_freq, 50.0);
+  // set queue size for listener
+  int listener_queue_size;
+  n_tilde.param("listener_queue_size", listener_queue_size, 1);
   // set whether to use the /tf_static latched static transform broadcaster
   n_tilde.param("use_tf_static", use_tf_static_, true);
   // ignore_timestamp_ == true, joins_states messages are accepted, no matter their timestamp
@@ -79,7 +82,7 @@ JointStateListener::JointStateListener(const std::shared_ptr<RobotStatePublisher
   ros::TransportHints transport_hints;
   transport_hints.tcpNoDelay(true);
   // subscribe to joint state
-  joint_state_sub_ = n.subscribe("joint_states", 1, &JointStateListener::callbackJointState, this, transport_hints);
+  joint_state_sub_ = n.subscribe("joint_states", listener_queue_size, &JointStateListener::callbackJointState, this, transport_hints);
 
   // trigger to publish fixed joints
   // if using static transform broadcaster, this will be a oneshot trigger and only run once
