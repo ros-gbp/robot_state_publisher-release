@@ -1,3 +1,26 @@
+## robot_state_publisher (noetic) - 1.15.3-1
+
+The packages in the `robot_state_publisher` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -r noetic robot_state_publisher` on `Thu, 10 Apr 2025 21:22:12 -0000`
+
+The `robot_state_publisher` package was released.
+
+Version of package(s) in repository `robot_state_publisher`:
+
+- upstream repository: https://github.com/ros/robot_state_publisher.git
+- release repository: https://github.com/ros-gbp/robot_state_publisher-release.git
+- rosdistro version: `1.15.2-1`
+- old version: `1.15.2-1`
+- new version: `1.15.3-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## robot_state_publisher (noetic) - 1.15.2-1
 
 The packages in the `robot_state_publisher` repository were released into the `noetic` distro by running `/usr/bin/bloom-release --rosdistro noetic --track noetic robot_state_publisher` on `Thu, 30 Sep 2021 18:48:05 -0000`
